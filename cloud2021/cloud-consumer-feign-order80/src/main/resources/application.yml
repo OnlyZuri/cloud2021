@@ -1,0 +1,16 @@
+server:
+  port: 80
+eureka:
+  client:
+    service-url:
+      defaultZone: http://eureka7001.com:7001/eureka, http://eureka7002.com:7002/eureka
+    register-with-eureka: false
+    fetch-registry: true
+
+logging:
+  level:
+    com.hjy.springcloud.service.OrderService: debug
+
+ribbon:
+  ReadTimeout: 8000
+  ConnectTimeout: 8000
